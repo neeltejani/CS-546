@@ -1,0 +1,80 @@
+<main>
+
+ 
+
+<br>
+<br><br><br><br><br><br>
+<h1 class="center1">User Signup</h1>
+
+<form action="/usersignup" method="POST" id="signup-form">
+  
+
+  <div class="center1">
+   
+
+     <br>
+   <label for="username">username</label>  <br>
+   <input type="text" placeholder="Enter username" name="username" id="username" class="center1" required> 
+
+    <br>
+
+
+<label for="phonenumber"><b>Phone Number</b></label> <br>
+   <input class="ghost-round2" type="tel" id="phonenumber" name="phone"
+       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+       required> 
+<br>
+<small>Format: 123-456-7890</small>
+
+<br>
+<br>
+<label for = "gender">Gender:<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                        
+                <select class="ghost-round2"  name="gender" id="gender" 
+                        onfocus="this.select()"> 
+					<option>Select a Value:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                         <option value="other">Other</option>
+                         </select> 
+						 </label>
+						 <br> 
+                         <br>
+
+        <label for="email"><b>E-mail</b></label>
+    <input type="email" placeholder="Enter Email" name="email"  id="email" required> 
+    <br> 
+    
+<label for="address"><b>Address</b></label>
+ <input type="text" placeholder="Enter Address" name="address" id="address" required>
+        <br>
+
+       <label for="password"><b>Password</b></label>
+   <input type="password" placeholder="Enter Password" name="password" id="password" required>
+        <br> <br> 
+
+        <p class="center1">Input password has to be 6-20 characters which contain at least one numeric digit, one uppercase and one lowercase letter</p>
+
+   <button type="submit" class="container5">Signup as User</button>
+   <br>
+   <br>
+   <br>
+   <a href = "/userlogin" class="login">Login</a>
+
+  </div>
+
+ 
+</form>
+
+<div id="error" hidden>
+</div>
+  {{#if error}}
+<p class="center1"> {{ error }}</p>
+{{/if}}
+
+
+
+
+
+</main>
+<script src="/public/js/code.js"></script>

@@ -1,0 +1,100 @@
+<!DOCTYPE html> 
+<html lang ="en"> 
+    <head> 
+        <meta charset ="utf-8"> 
+        <title>EventNest</title> 
+        <link rel = "stylesheet" href="/public/css/site.css"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head> 
+    <body> 
+        {{{body}}} 
+        {{!-- <script> src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"</script>
+        <script> src="/public/js/form.js"</script> --}}
+        {{!-- <script> src="/public/js/code.js"</script> --}}
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> 
+        <script src="/public/js/form.js"></script>
+        {{!-- <script src="/public/js/code.js"></script> --}}
+        <script>
+  $('.like').each((index, elem) => {
+      console.log(elem);
+    $(elem).click((event) => {
+      event.preventDefault();
+      console.log(event);
+      let link = event.target.href
+      console.log(link);
+      let requestConfig = {
+        method: 'POST',
+        url: link
+      }
+      $.ajax(requestConfig).then((message) => {
+          console.log(elem)
+          $(elem).next().text(message.likeAdded);
+      });
+    })
+  })
+
+
+    $('.interested').each((index, elem) => {
+      console.log(elem);
+    $(elem).click((event) => {
+      event.preventDefault();
+      console.log(event);
+      let link = event.target.href
+      console.log(link);
+      let requestConfig = {
+        method: 'POST',
+        url: link
+      }
+      $.ajax(requestConfig).then((message) => {
+          console.log(elem)
+          $(elem).next().text(message.interestedAdded);
+      });
+    })
+  })
+
+
+    $('.going').each((index, elem) => {
+      console.log(elem);
+    $(elem).click((event) => {
+      event.preventDefault();
+      console.log(event);
+      let link = event.target.href
+      console.log(link);
+      let requestConfig = {
+        method: 'POST',
+        url: link
+      }
+      $.ajax(requestConfig).then((message) => {
+          console.log(elem)
+          $(elem).next().text(message.goingAdded);
+      });
+    })
+  })
+
+  $('#commentform').submit((event) => {
+    let commentval = $('#comment').val();
+    if (commentval.length === 0 || commentval.trim().length === 0) {
+      event.preventDefault();
+      alert("Please enter a valid comment!")
+    }
+  })
+
+    if($('.bookEventincheck')) {
+      $('.bookEventincheck').click((event) => {
+          let cardname = $('#cname').val()
+          let cardno = $('#ccnum').val()
+            let expmonth = $('#expmonth').val()
+            console.log(cardname, cardno, expmonth)
+            if (cardname.length === 0 || cardno.length === 0 || expmonth.length === 0 || cardname.trim().length === 0 || cardno.trim().length === 0 || expmonth.trim().length === 0) {
+                event.preventDefault()
+                alert("Please check your inputs.")
+            }
+      })
+      }
+  
+</script>
+
+    </body>
+</html> 

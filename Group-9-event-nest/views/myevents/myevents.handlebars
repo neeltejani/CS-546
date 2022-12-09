@@ -1,0 +1,84 @@
+<main>
+
+  <br><br><br>
+
+
+  <h1 class="center1">Events Created by you </h1>
+
+  <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;<a href="/logout"> Logout </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>
+  <br>
+
+  <div>
+    &nbsp;&nbsp;<a href="/bookedevents"> Booked Events </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+  </div>
+
+
+
+
+
+  <form autocomplete="off" method="POST" action="/userhomepage">
+
+
+
+  </form>
+
+  {{#each myEvents}}
+  <div class="ggg">
+    <p class="container3">{{this.title}}</p><br>
+    <p class="container3"> Category: {{this.category}} </p><br>
+    <p class="container3">Creator Name: {{this.creator}}</p><br>
+    <p class="container3">Start Time: {{this.timestart}}</p><br>
+    <p class="container3">End Time: {{this.endtime}}</p><br>
+    <p class="container3">Address: {{this.address}}</p><br>
+    <p class="container3">City: {{this.city}}</p><br>
+    <p class="container3">State: {{this.state}}</p><br>
+    <p class="container3">Description: {{this.description}}</p><br>
+    <p class="container4">Tickets Available: {{this.ticketcapacity}}</p> <br>
+    <p class="container4">Ticket Price: {{this.price}}</p> <br>
+
+
+
+
+    <button class="btn btn-primary" type="submit"> Likes : {{this.likeList.length}} </button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+    <button class="btn btn-primary" type="submit"> Interested : {{this.interestedList.length}} </button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+    <button class="btn btn-primary" type="submit">Going : {{this.going.length}} </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <a href="/edit-event/{{this._id}}" style="text-decoration: none ; color:#eee">Edit Ticket Preferences</a>
+
+    <br>
+    <br>
+    <br>
+
+
+
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  {{/each}}
+  <div class="center1">
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/userhomepage">Homepage</a>
+  </div>
+
+</main>

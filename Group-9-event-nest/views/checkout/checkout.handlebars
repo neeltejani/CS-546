@@ -1,0 +1,85 @@
+<main>
+  <br>
+  <br><br>
+
+  <h1 class="center1">Booking for the event "{{event.title}}"</h1>
+  <br><br>
+  <br><br>
+
+  <div class="ggg">
+
+    <p class="container3"> <strong>Title:</strong> {{event.title}} </p> <br>
+    <p class="container3"> <strong>Category:</strong> {{event.category}} </p><br>
+
+    <p class="container3"><strong>Start Time:</strong> {{event.timestart}}</p><br>
+    <p class="container3"><strong>End Time: </strong> {{event.endtime}}</p><br>
+    <p class="container3"><strong>Address:</strong> {{event.address}}</p><br>
+    <p class="container3"><strong>City:</strong> {{event.city}}</p><br>
+    <p class="container3"><strong>State:</strong> {{event.state}}</p><br>
+    <p class="container3"><strong>Description:</strong> {{event.description}}</p><br>
+    <p class="container4"><strong>Ticket Price:</strong> {{event.price}}</p><br>
+    <br><br><br>
+  </div>
+  <br><br>
+
+  <div class="center">
+    <h1>Payment</h1>
+    <p>Accepted Cards
+    <p>
+    <div class="icon-container">
+     
+    </div>
+    <label for="cname">Name on Card</label>
+    <input type="text" id="cname" name="cardname" placeholder="John More Doe" required>
+    <label for="ccnum">Credit card number</label> &nbsp;&nbsp;&nbsp;
+    <input type="number" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="expmonth">Exp Month</label>
+   <select>
+                    <option value="01">January</option>
+                    <option value="02">February </option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select><br><br>
+    <div class="row">
+      <div class="col-50">
+        <label for="expyear">Exp Year</label>
+      <select>
+                    <option value="01">2021</option>
+                    <option value="02">2022 </option>
+                    <option value="03">2023</option>
+                    <option value="04">2024</option>
+                    <option value="05">2025</option>
+                    <option value="06">2026</option>
+                    <option value="07">2027</option>
+                    <option value="08">2028</option>
+                    <option value="09">2029</option>
+                    <option value="10">2030</option>
+                </select>
+      </div>
+      <div class="col-50">
+        <label for="cvv">CVV</label>
+        <input type="password" id="cvv" name="cvv" placeholder="352" min="0" max="999" required>
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+
+
+
+  <br>
+  <div class="center1"><a class="bookEventincheck" href="/bookedevents/{{event._id}}">Book this Event</a></div><br>
+  <div class="center1">
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/userhomepage">Homepage</a>
+  </div>
+</main>

@@ -1,0 +1,99 @@
+body {
+    background: #fefefe;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 15pt;
+}
+
+main {
+    max-width: 75%;
+    margin: auto;
+}
+
+header {
+    border-bottom: 1px solid #afafaf;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 1.15rem;
+}
+
+h6 {
+    font-size: 1.05rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.post {
+    width: 75%;
+    border-bottom: 1px dashed #333;
+}
+
+.is-palindrome {
+    color: #0000ff;
+}
+
+.not-palindrome {
+    color: #ff0000;
+}
+
+.header {
+    padding: 8px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: aquamarine;
+    color: black;
+    text-align: center;
+}
+.paragraph {
+    text-align: center;
+}
+
+.hello1 {
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+}
+.hello2 {
+    color: brown;
+}
+.hello3 {
+    width: 25%;
+    text-align: center;
+}

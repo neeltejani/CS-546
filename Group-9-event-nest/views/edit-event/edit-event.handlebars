@@ -1,0 +1,62 @@
+
+
+
+
+	<!-- Begin page content -->
+	<main class="container">
+		
+		<div >
+			<div class="col-md-10 col-lg-8">
+				<header class="title mt-3 mb-2">Edit Ticket Preferences</header>
+				<br><br><br>
+				<form class="needs-validation ml-1"  method="POST" action="/edit-eventsub" id="edit-event-form" autocomplete="off">
+
+						<div>
+							<label for="eventid"></label>
+							<input name="eventid" id="eventid" value="{{event._id}}" hidden>
+						</div>
+
+                   <div>
+							<label for="ticketcapacity">Ticket Capacity:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+							<input type="number" class="ghost-round2" name="ticketcapacity" id="ticketcapacity" placeholder="      Number of seats" required>
+							<p>for now you have {{event.ticketcapacity}} seats</p><br><br>
+                            <h4>Price<h4>
+							
+						</div>
+					</div>
+       
+
+					
+						<div>
+							<label for="price"></label>
+                            
+							<input type="number" class="ghost-round2" name="price" id="price" placeholder="        Price">
+							<p>for now you ticket price is {{event.price}}</p>
+						
+							<br>
+						<br>
+						</div>
+						
+
+
+					<div class="center1"><button type="submit" class='button' value = "edit" >Confirm!</button></div>
+				
+			
+		</div>
+        </form>
+	</main>
+
+<div id="error" hidden>
+</div>
+
+{{#if error}}
+<p> {{ error }}</p>
+{{/if}}
+
+
+	
+
+	
+</body> 
+
+<script src="/public/js/edit.js"></script>
